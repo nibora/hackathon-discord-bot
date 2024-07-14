@@ -1,0 +1,8 @@
+# Environment
+discord_env/
+
+# macOS
+.DS_Store
+
+# Cache
+__pycache__/
