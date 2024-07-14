@@ -12,10 +12,11 @@ async def sendMessage(message: Message, user_message: str) -> None:
         response: str = getResponse(user_message, str(message.author))
         if "nicht" in response:
             gif = "https://i.gifer.com/1F1I.gif"
-        else:
+            await message.channel.send(gif)
+        elif "regnet" in response:
             gif = "https://cdn.pixabay.com/animation/2022/10/04/00/46/00-46-44-880_512.gif"
+            await message.channel.send(gif)
 
-        await message.channel.send(gif)
         await message.channel.send(response)
     except Exception as e:
         print(e)
